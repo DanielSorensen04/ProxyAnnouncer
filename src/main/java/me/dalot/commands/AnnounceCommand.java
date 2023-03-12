@@ -30,18 +30,17 @@ public class AnnounceCommand implements SimpleCommand {
             if (args.length > 0) {
                 switch (args[0].toLowerCase()) {
                     case "about" -> {
-                        p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fRunning v1.2.1"));
-                        p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fCreated by &b&nMattMX")
-                                .clickEvent(ClickEvent.openUrl("https://www.mattmx.com/")));
+                        p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fRunning v1.1.14"));
+                        p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fCreated by &b&nDalot421"));
                     }
                     case "reload" -> {
                         if (p.hasPermission("vannouncer.commands.reload")) {
-                            p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fReloading!"));
+                            p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fReloading!"));
                             Config.init();
                             AnnouncerManager.load();
-                            p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fReloaded all data from files!"));
+                            p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fReloaded all data from files!"));
                         } else {
-                            p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fRunning v1.2.1"));
+                            p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fRunning v1.1.14"));
                         }
                     }
                     case "force" -> {
@@ -51,17 +50,17 @@ public class AnnounceCommand implements SimpleCommand {
                             if (msg != null) {
                                 ProxyAnnouncer.getInstance().getServer().getAllPlayers().forEach(msg::execute);
                             } else {
-                                p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &cNo valid message by that ID!"));
+                                p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &cNo valid message by that ID!"));
                             }
                         }
                     }
                     default -> {
-                        p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fRunning v1.0.0"));
+                        p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fRunning v1.1.14"));
                     }
                 }
             } else {
                 if (!ProxyAnnouncer.hasProtocolize()) {
-                    p.sendMessage(VelocityChat.color("&9&lAnnouncer &7» &fYou do not have &a&nProtocolize&f installed!")
+                    p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fYou do not have &a&nProtocolize&f installed!")
                             .clickEvent(ClickEvent.openUrl("https://github.com/Exceptionflug/protocolize")));
                     return;
                 }
@@ -70,7 +69,7 @@ public class AnnounceCommand implements SimpleCommand {
                 screen.open();
             }
         } else {
-            p.sendMessage(VelocityChat.color("&9&lVelocityAnnouncer &7» &fRunning v1.0.0"));
+            p.sendMessage(VelocityChat.color("&b&lBUILDERS REFUGE &7» &fRunning v1.1.14"));
         }
     }
 
